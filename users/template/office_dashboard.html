@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Office Staff Dashboard</h1>
+<ul>
+    <li><a href="{% url 'office_students' %}">View Students</a></li>
+    <li><a href="{% url 'add_fee' %}">Add Fee Record</a></li>
+    <li><a href="{% url 'edit_fee' fee_id=1 %}">Edit Fee Record (Example)</a></li>
+</ul>
+{% endblock %}

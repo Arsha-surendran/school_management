@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Fees History</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Fee Type</th>
+        <th>Amount</th>
+        <th>Payment Date</th>
+        <th>Remarks</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for fee in fees %}
+        <tr>
+          <td>{{ fee.student.name }}</td>
+          <td>{{ fee.fee_type }}</td>
+          <td>{{ fee.amount }}</td>
+          <td>{{ fee.payment_date }}</td>
+          <td>{{ fee.remarks }}</td>
+          <td>
+            <a href="{% url 'edit_fee_history' fee.id %}">Edit</a> |
+            <a href="{% url 'delete_fee_history' fee.id %}">Delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

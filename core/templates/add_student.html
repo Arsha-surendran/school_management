@@ -1,0 +1,12 @@
+{% if perms.core.add_student %}
+    <button><a href="{% url 'add_student' %}">Add Student</a></button>
+{% endif %}
+
+{% if perms.core.view_student %}
+    <h2>Student List</h2>
+    <ul>
+        {% for student in students %}
+        <li>{{ student.first_name }} {{ student.last_name }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}

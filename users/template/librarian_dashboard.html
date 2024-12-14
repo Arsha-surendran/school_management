@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Librarian Dashboard</h1>
+<ul>
+    <li><a href="{% url 'view_library_history' %}">View Library History</a></li>
+    <li><a href="{% url 'librarian_students' %}">View Students</a></li>
+</ul>
+{% endblock %}

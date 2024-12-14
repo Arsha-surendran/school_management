@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>You have been logged out</h2>
+  <p>Thank you for visiting. Click below to log in again:</p>
+  <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+  
+  <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+{% endblock %}
+<p>You logged out at {{ logout_time|date:"H:i:s" }}. Visit our <a href="/">homepage</a> for more information.</p>

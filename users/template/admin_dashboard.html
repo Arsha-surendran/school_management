@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+<ul>
+    <li><a href="{% url 'manage_staff' %}">Manage Staff</a></li>
+    <li><a href="{% url 'manage_students' %}">Manage Students</a></li>
+    <li><a href="{% url 'manage_fees' %}">Manage Fees</a></li>
+    <li><a href="{% url 'manage_library' %}">Manage Library Records</a></li>
+</ul>
+{% endblock %}
